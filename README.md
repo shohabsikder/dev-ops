@@ -15,6 +15,7 @@ We propose the development of a robust, scalable, and secure web application tai
 Frontend: Angular with NZ-Zorro
 
 
+
 Backend: Node.js (Hapi.js Framework)
 
 
