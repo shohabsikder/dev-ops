@@ -1,20 +1,18 @@
-name : Print Txt File
+name: Hello World Workflow
 
 on:
   push:
     branches:
-      -main
-  pull request:
-    branches:
-      -main
+      - main  # This triggers the workflow when changes are pushed to the 'main' branch.
 
 jobs:
-  read_the_file:
-  runs-on:ubuntu-latest
-  steps:
-    - name: Git Checkout korte hobe
-      uses: actions/checkout@v2
-    - name: Read the Txt File
-      run :
-        ls -l
-        cat hello.txt
+  build:
+    runs-on: ubuntu-latest  # Specifies the runner environment.
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # Checkout the code from the repository.
+
+      - name: Read hello.txt and print its content
+        run: |
+          cat hello.txt  # Reads and outputs the content of hello.txt to the log.
